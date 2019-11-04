@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/tvIdentityHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Your identity:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSignOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:text="Sign Out"
+        app:layout_constraintBottom_toBottomOf="@id/tvCurrentIdentity"
+        app:layout_constraintStart_toEndOf="@id/tvCurrentIdentity"
+        app:layout_constraintTop_toTopOf="@id/tvCurrentIdentity" />
+
+    <TextView
+        android:id="@+id/tvCurrentIdentity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/tvIdentityHint"
+        app:layout_constraintTop_toTopOf="@id/tvIdentityHint"
+        tools:text="Identity" />
+
+    <View
+        android:id="@+id/lineOne"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="64dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentIdentity" />
+
+    <TextView
+        android:id="@+id/tvSendMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Send Message:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineOne" />
+
+    <EditText
+        android:id="@+id/etReceiver"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:hint="Receiver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSendMessage" />
+
+    <EditText
+        android:id="@+id/etBody"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:hint="Message"
+        app:layout_constraintStart_toEndOf="@id/etReceiver"
+        app:layout_constraintTop_toBottomOf="@id/tvSendMessage" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etBody" />
+
+    <View
+        android:id="@+id/lineTwo"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="64dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSend" />
+
+    <TextView
+        android:id="@+id/tvReceiveMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Receive Message:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineTwo" />
+
+    <EditText
+        android:id="@+id/etSender"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:hint="Sender"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReceiveMessage" />
+
+    <Button
+        android:id="@+id/btnReceive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Receive"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/etSender"
+        app:layout_constraintTop_toBottomOf="@id/tvReceiveMessage" />
+
+    <TextView
+        android:id="@+id/tvMessageReceived"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnReceive"
+        tools:text="Message received" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
